@@ -124,6 +124,48 @@
               <span class="card-arrow">→</span>
             </div>
           </NuxtLink>
+
+          <!-- Card 7: Validação de Rotas -->
+          <NuxtLink to="/products/123" class="nav-card">
+            <div class="card-icon">✅</div>
+            <h3 class="card-title">Validação de Rotas</h3>
+            <p class="card-description">
+              Use definePageMeta com validate para validar parâmetros antes de renderizar!
+            </p>
+            <div class="card-tag">Avançado</div>
+            <div class="card-footer">
+              <span class="card-path">/pages/products/[id].vue</span>
+              <span class="card-arrow">→</span>
+            </div>
+          </NuxtLink>
+
+          <!-- Card 8: Sistema de Layouts -->
+          <NuxtLink to="/layouts-example" class="nav-card">
+            <div class="card-icon">🎨</div>
+            <h3 class="card-title">Sistema de Layouts</h3>
+            <p class="card-description">
+              Aprenda sobre NuxtLayout e NuxtPage. Crie layouts reutilizáveis para suas páginas!
+            </p>
+            <div class="card-tag">Intermediário</div>
+            <div class="card-footer">
+              <span class="card-path">/layouts/*.vue</span>
+              <span class="card-arrow">→</span>
+            </div>
+          </NuxtLink>
+
+          <!-- Card 9: Lazy Loading -->
+          <NuxtLink to="/lazy-loading-example" class="nav-card">
+            <div class="card-icon">⚡</div>
+            <h3 class="card-title">Lazy Loading</h3>
+            <p class="card-description">
+              Otimize performance com carregamento preguiçoso! Componentes, imagens e importações dinâmicas.
+            </p>
+            <div class="card-tag">Avançado</div>
+            <div class="card-footer">
+              <span class="card-path">/pages/lazy-loading-example.vue</span>
+              <span class="card-arrow">→</span>
+            </div>
+          </NuxtLink>
         </div>
       </section>
 
@@ -168,9 +210,9 @@
 import { ref } from 'vue'
 
 // 📊 Estados reativos - Contadores para estatísticas
-const routesCount = ref(8)
+const routesCount = ref(11)
 const middlewaresCount = ref(2)
-const conceptsCount = ref(4)
+const conceptsCount = ref(8)
 
 /**
  * 💡 DICAS DE NAVEGAÇÃO NUXT:

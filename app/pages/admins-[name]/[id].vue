@@ -537,7 +537,7 @@ $admin-color: #ef4444;
   transition: all 0.3s ease;
 
   &:hover {
-    background: darken($primary, 10%);
+    background: #00a86b;
     transform: translateX(-4px);
   }
 }

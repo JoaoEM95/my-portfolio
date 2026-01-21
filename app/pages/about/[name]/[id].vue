@@ -70,7 +70,8 @@
           <ul>
             <li><strong>Estrutura de Pastas:</strong> <code>/pages/about/[name]/[id].vue</code></li>
             <li><strong>URL Gerada:</strong> <code>/about/:name/:id</code></li>
-            <li><strong>Acesso aos Parâmetros:</strong> <code>useRoute().params.name</code> e <code>useRoute().params.id</code></li>
+            <li><strong>Acesso aos Parâmetros:</strong> <code>useRoute().params.name</code> e
+              <code>useRoute().params.id</code></li>
             <li><strong>Ordem Importa:</strong> Os parâmetros são capturados na ordem das pastas!</li>
           </ul>
         </div>
@@ -138,6 +139,7 @@ console.log('route', route)</code></pre>
 </template>
 
 <script setup>
+
 /**
  * 📂 ROTAS ANINHADAS COM MÚLTIPLOS PARÂMETROS
  *
@@ -148,6 +150,12 @@ console.log('route', route)</code></pre>
 const route = useRoute()
 const id = route.params.id
 
+useHead({
+  title: "about page",
+  meta: [
+    { name: 'description', content: "This is about page" }
+  ]
+})
 /**
  * 💡 DICA:
  * Você pode acessar route diretamente no template usando $route
@@ -474,7 +482,7 @@ $text-light: #64748b;
   transition: all 0.3s ease;
 
   &:hover {
-    background: darken($primary, 10%);
+    background: #00a86b;
     transform: translateX(-4px);
   }
 }
