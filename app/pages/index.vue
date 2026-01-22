@@ -166,6 +166,34 @@
               <span class="card-arrow">→</span>
             </div>
           </NuxtLink>
+
+          <!-- Card 10: Transitions -->
+          <NuxtLink to="/transitions-example" class="nav-card">
+            <div class="card-icon">🎬</div>
+            <h3 class="card-title">Transitions & Animações</h3>
+            <p class="card-description">
+              Crie animações suaves com Transition e TransitionGroup. Domine timing functions e easing!
+            </p>
+            <div class="card-tag">Intermediário</div>
+            <div class="card-footer">
+              <span class="card-path">/pages/transitions-example.vue</span>
+              <span class="card-arrow">→</span>
+            </div>
+          </NuxtLink>
+
+          <!-- Card 11: Nuxt Transitions -->
+          <NuxtLink to="/nuxt-transitions" class="nav-card">
+            <div class="card-icon">🔄</div>
+            <h3 class="card-title">Nuxt Page Transitions</h3>
+            <p class="card-description">
+              Aprenda sobre transições de página nativas do Nuxt! Animações automáticas entre rotas.
+            </p>
+            <div class="card-tag">Avançado</div>
+            <div class="card-footer">
+              <span class="card-path">/pages/nuxt-transitions/*.vue</span>
+              <span class="card-arrow">→</span>
+            </div>
+          </NuxtLink>
         </div>
       </section>
 
@@ -210,9 +238,9 @@
 import { ref } from 'vue'
 
 // 📊 Estados reativos - Contadores para estatísticas
-const routesCount = ref(11)
+const routesCount = ref(13)
 const middlewaresCount = ref(2)
-const conceptsCount = ref(8)
+const conceptsCount = ref(11)
 
 /**
  * 💡 DICAS DE NAVEGAÇÃO NUXT:

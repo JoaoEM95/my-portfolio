@@ -27,6 +27,9 @@
       É como um <router-view> do Vue Router, mas otimizado para Nuxt.
 
       Cada arquivo em /pages se torna uma rota automaticamente!
+
+      🎬 Page Transitions: Habilitadas no nuxt.config.ts.
+      Cada página pode definir sua própria transição com definePageMeta().
     -->
     <main class="app-main">
       <NuxtPage />
@@ -158,5 +161,89 @@ onMounted(() => {
   .app-main {
     padding: 2rem 0;
   }
+}
+</style>
+
+<style>
+/**
+ * 🎬 NUXT PAGE TRANSITIONS - Global CSS
+ *
+ * Estas classes são usadas pelas transições de página do Nuxt.
+ * Devem estar em um <style> NÃO-SCOPED para funcionar globalmente.
+ */
+
+/* Fade Transition */
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.3s ease;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+}
+
+/* Slide Transition */
+.slide-enter-active,
+.slide-leave-active {
+  transition: all 0.4s ease;
+}
+
+.slide-enter-from {
+  transform: translateY(30px);
+  opacity: 0;
+}
+
+.slide-leave-to {
+  transform: translateY(-30px);
+  opacity: 0;
+}
+
+/* Scale Transition */
+.scale-enter-active,
+.scale-leave-active {
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.scale-enter-from {
+  transform: scale(0.9);
+  opacity: 0;
+}
+
+.scale-leave-to {
+  transform: scale(1.1);
+  opacity: 0;
+}
+
+/* Rotate Transition */
+.rotate-enter-active,
+.rotate-leave-active {
+  transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.rotate-enter-from {
+  transform: rotate(-180deg) scale(0.8);
+  opacity: 0;
+}
+
+.rotate-leave-to {
+  transform: rotate(180deg) scale(0.8);
+  opacity: 0;
+}
+
+/* Page Transition - Default (se configurado no nuxt.config) */
+.page-enter-active,
+.page-leave-active {
+  transition: all 0.3s ease;
+}
+
+.page-enter-from {
+  opacity: 0;
+  transform: translateX(-20px);
+}
+
+.page-leave-to {
+  opacity: 0;
+  transform: translateX(20px);
 }
 </style>
